@@ -1,0 +1,155 @@
+
+* {
+	color: rgb(230,230,230);
+}
+
+
+body{
+	background: rgb(169,174,233);
+	margin: 0px;
+}
+
+
+.titrePrincipal {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background: rgb(63,72,204);
+	padding-bottom: 5px;
+}
+
+.conteneurButtons {
+	display: flex;
+	justify-content: center;
+}
+.btn {
+	margin: 20px;
+	color: black;
+}
+.difficulté ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 30px;
+}
+
+.difficulté ul li{
+	font-size: 1.5em;
+    font-weight: bold;
+}
+
+.difficulté {
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.difficulté ul li {
+	padding: 10px;
+}
+
+.conteneur {
+    width: 366px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 20px rgb(217,217,217) solid;
+    background: rgb(217,217,217);
+    border-radius: 10px;
+}
+
+section {
+	display: flex;
+	justify-content: space-between;
+}
+
+.im {
+	/*border: black solid 1px;*/
+	width: 120px;
+	height: 120px;
+	background-color: purple;
+	display: flex;
+	padding: 10px white;
+	border-radius: 10px;
+}
+
+.im span {
+	color: black;
+	margin-left: auto;
+    margin-right: auto;
+    width: 10px;
+    margin-top:38px;
+    font-size: 2em;
+  
+    font-weight: bold;
+}
+
+.ghost{
+	visibility:hidden;
+}
+
+.movable {
+	cursor: pointer;
+}
+.sous-jeu {
+	display: flex;
+	justify-content: center;
+}
+
+.reset {
+  	width: 50px;
+  	margin-right: 40px;
+  	margin-left: 40px;
+  	margin-top:20px;
+  	margin-bottom: 20px;
+}
+.btn {
+	visibility: visible;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: rgb(217,217,217);
+}
+/* Images */
+#image1 {
+	background-image: url("im1.png");
+}
+#image2 {
+	
+	background-image: url("im2.png");
+}
+#image3 {
+
+	background-image: url("im3.png");
+}
+#image4 {
+
+	background-image: url("im4.png");
+}
+#image5 {
+
+	background-image: url("im5.png");
+}
+
+#image6 {
+	background-image: url("im6.png");
+}
+#image7 {
+
+	background-image: url("im7.png");
+}
+
+#image8 {
+
+	background-image: url("im8.png");
+}
+
+#image9 {
+	background-color: white;
+}
+
+.background {
+	background-color: blue;
+}

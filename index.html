@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Taquin</title> 
+    </head>
+    <body>
+    	<h1 class="titrePrincipal" id="main">Taquin</h1>
+        <div class="conteneurButtons">
+            <button class="btn hideNumbers">Hide Numbers</button>
+            <button class="btn reset">Reset</button>
+        </div>
+    	<section class="jeuTaquin">
+    		<nav class="difficulté">
+	    		<ul>
+	    			<li>3x3</li>
+	    			<li>4x4</li>
+	    			<li>5x5</li>
+	    		</ul>
+    		</nav>
+    		<div class="conteneur">
+    			<div class="im movable" id="image1">
+                    <span>1</span>
+                </div>
+                <div class="im movable" id="image2">
+                    <span>2</span>
+                </div>
+                <div class="im" id="image3">
+                    <span>3</span>
+                </div>
+                <div class="im movable" id="image4">
+                    <span>4</span>
+                </div>
+                <div class="im movable" id="image5">
+                    <span>5</span>
+                </div>
+                <div class="im movable" id="image6">
+                    <span>6</span>
+                </div>
+                <div class="im movable" id="image7">
+                    <span>7</span>
+                </div>
+                <div class="im movable" id="image8">
+                    <span>8</span>
+                </div>
+                <div class="im movable ghost" id="image9">
+                    <span>9</span>
+                </div>
+            </div>
+            <div class="difficulté ghost">
+                <ul>
+                    <li>3x3</li>
+                    <li>4x4</li>
+                    <li>5x5</li>
+                </ul>
+            </div>
+    	</section>
+    <div class="sous-jeu">
+        <div class="compteurCoups">
+            <p> Nombre de coups :</p><span class="compteur">0</span>
+        </div>
+    </div>
+    <script src='taquin.js' async> </script>
+    </body>
+</html>
+
