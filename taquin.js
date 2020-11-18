@@ -12,9 +12,15 @@ let elt9 = document.getElementById('image9');
 let btnReset = document.getElementsByClassName("reset")[0];
 let btnHideNbrs = document.getElementsByClassName("hideNumbers")[0];
 let btnHideImages = document.getElementsByClassName("hideImages")[0];
-let nbrCoups;
+let nbrCoups =0;
+var startTime = 0;
+var start = 0;
+var end = 0;
+var diff = 0;
+var timerID = 0;
+window.onload = chronoStart;
 
-btnReset.onclick = function() {game();}
+btnReset.onclick = function() {game(); chronoStart();}
 btnHideNbrs.onclick = function() {hideNumbers();}
 
 function hideNumbers() {
@@ -29,10 +35,27 @@ function hideNumbers() {
 	}
 }
 
-function chrono() {
-	let tps= 0;
-	setInterval((tps) => (tps+1),1000);
+function chronoStart() {
+	start = new Date();
+	chrono();
 }
+
+function chrono() {
+	end = new Date();
+	diff = end - start;
+	diff = new Date(diff);
+	var sec = diff.getSeconds();
+	var min = diff.getMinutes();
+	if (min < 10){
+		min = "0" + min;
+	}
+	if (sec < 10){
+		sec = "0" + sec
+	}
+	document.getElementsByClassName("chronotime")[0].innerHTML = min + ":" + sec;
+	timerID = setTimeout("chrono()", 10);
+}
+
 
 function shuffle19() {
 	let newPool = [];
@@ -209,6 +232,7 @@ function win() {
 function game() {
 	init();
 	nbrCoups =0;
+	document.getElementsByClassName("compteur")[0].innerHTML = nbrCoups;
 	changeAllMovable();
 	replaceNumbers();
 	elt1.onclick = function() {exchangeId(document.getElementsByClassName("im")[0].id,'image9');}
